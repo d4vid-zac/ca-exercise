@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="cstatement"></p>
+    <p id="ifstatement"></p>
+    <p id="num1"></p>
+    <p id="num2"></p>
+    <p id="num3"></p>
+    <p id="num4"></p>
+    <p id="num5"></p>
+
+    <script>
+        var yourgrade = prompt("What is your grade?")
+        yourgrade = yourgrade.toUpperCase()
+        switch (yourgrade) {
+            case "A":
+            case "B":
+            grade = "Excellent";
+            break;
+            case "C":
+            grade = "You passed";
+            break;
+            case "D":
+            grade = "Needs imporvement";
+            break;
+            case "F":
+            grade = "Failed";
+            break;
+            default:
+            grade = "Please input a valid grade.";
+        }
+        cstatement.innerHTML = grade;
+
+        var yourgrades = prompt("What is your grade?")
+        yourgrades = yourgrades.toUpperCase()
+        if (yourgrades === "A" || yourgrades === "B") {
+        ifstatement.innerHTML = "Excellent";
+        } else if (yourgrades === "C") {
+        ifstatement.innerHTML = "You passed!";
+        } else if (yourgrades === "D") {
+        ifstatement.innerHTML = "Needs Improvement";
+        } else if (yourgrades === "F") {
+        ifstatement.innerHTML = "Failed";
+        } else {
+        ifstatement.innerHTML = "Input Valid Grade";
+        }
+
+        var id = prompt("Do you have your school I.D?: ")
+        id = id.toLowerCase()
+
+        switch (id) {
+            case "yes":
+            num1.innerHTML = "Welcome to the Event!";
+            break;
+            default:
+            num1.innerHTML = "Please show your I.D";
+        }
+
+        var stu = prompt("Are you a student? (yes/no)");
+        var sen = prompt("Are you a senior citizen? (yes/no)");
+
+        switch (true) {
+            case (stu.toLowerCase() === "yes" || sen.toLowerCase() === "yes"):
+            num1.innerHTML = "You get a discounted fare.";
+            break;
+            default:
+            num1.innerHTML = "You will pay the regular fare.";
+        }  
+
+        var gradess = prompt("Input your quiz score (0–100).");
+
+        switch (true) {
+            case (Number(gradess) >= 90 && Number(gradess) <= 100):
+            num2.innerHTML = "Excellent!";
+            break;
+            case (Number(gradess) >= 75 && Number(gradess) < 90):
+            num2.innerHTML = "Very Good!";
+            break;
+            case (Number(gradess) >= 60 && Number(gradess) < 75):
+            num2.innerHTML = "You Passed!";
+            break;
+            case (Number(gradess) >= 0 && Number(gradess) < 60):
+            num2.innerHTML = "You Failed!";
+            break;
+            default:
+            num2.innerHTML = "Invalid Score!";
+        }
+
+        var datapromo = prompt("Choose between A, B, or C.");
+        datapromo = datapromo.toUpperCase();
+
+            if (datapromo === "A") {
+            num3.innerHTML = "1GB for 1 day";
+            } else if (datapromo === "B") {
+            num3.innerHTML = "5GB for 7 days";
+            } else if (datapromo === "C") {
+            num3.innerHTML = "10GB for 30 days";
+            } else {
+            num3.innerHTML = "Invalid choice";
+            }
+
+        var dname = prompt("Please enter your full name.");
+        dname = dname.toLowerCase();
+
+        var count = 0;
+
+        for (let i = 0; i < dname.length; i++) {
+            let letter = dname[i];
+
+            switch (letter) {
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+            count++;
+            break;
+        }
+    }
+
+        num4.innerHTML = count;
+    </script>
+</body>
+</html>
